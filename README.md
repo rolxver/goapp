@@ -15,5 +15,7 @@ Password:                       ***
 Access token:                   *** (Subject: 'jfrt@01jypzsbjbhk4b04cecevm0jv8/users/sergioroldan96@gmail.com')
 Default:                        true
 
+$ git tag v0.1.0
+
 $ jf gp v0.1.0 --server-id rt-server
 ```
