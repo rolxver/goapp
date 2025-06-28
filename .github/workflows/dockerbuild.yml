@@ -29,4 +29,6 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: trialpy10vj.jfrog.io/goapp/hello-go:0.1.0
+          tags: |
+            trialpy10vj.jfrog.io/goapp/hello-go:0.1.0
+            trialpy10vj.jfrog.io/goapp/hello-go:latest
