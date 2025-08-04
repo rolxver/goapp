@@ -6,7 +6,7 @@ on:
 
 jobs:
   call-deploy:
-    uses: maveradss/ci-template/.github/workflows/git-clone.yml@test-branch
+    uses: MaveraDSS/ci-template/.github/workflows/git-clone.yml@test-branch
     with:
       source-url: ${{ github.repositoryUrl }}
       source-hash: ${{ github.sha }}
