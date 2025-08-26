@@ -18,7 +18,7 @@ on:
 
 jobs:
   call-workflow:
-    uses: MaveraDSS/ci-template/.github/workflows/build-push-deploy.yml@test-branch
+    uses: MaveraDSS/ci-template/.github/workflows/build-push-deploy.yml@develop
     # The called workflow will not be able to get secrets context from itself, even if it is 
     # defined at the organization level. It must be the caller workflow who passes down the secrets.
     secrets: inherit
