@@ -1,0 +1,24 @@
+name: Build, push and deploy
+
+on:
+  push:
+    branches:
+      - release/*
+  pull_request:
+    types:
+      - closed
+    branches:
+      - main
+
+jobs:
+  call-workflow:
+    if: |
+      github.event_name == 'push' ||
+      (github.event.pull_request.merged == true && (startsWith(github.event.pull_request.head.ref, 'release/') || startsWith(github.event.pull_request.head.ref, 'hotfix/')))
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello
+        env:
+          BRANCH: ${{ github.ref_name }}
+        shell: bash
+        run: echo "Hello, world from $BRANCH!"
