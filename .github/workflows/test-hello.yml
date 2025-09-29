@@ -18,4 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Say Hello
-        run: echo "Hello, world!"
+        env:
+          BRANCH: ${{ github.ref_name }}
+        shell: bash
+        run: echo "Hello, world from $BRANCH!"
